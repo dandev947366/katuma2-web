@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.10.12 on darwin)" generated="2024-10-02T11:27:43.622243" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Index" source="/Users/dandev947366/Desktop/katuma2-web/test_index.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-02T11:27:43.802147" level="INFO">Opening browser 'Chrome' to base url 'file:///Users/dandev947366/Desktop/katuma2-web/index.html'.</msg>
+<arg>file:///Users/dandev947366/Desktop/katuma2-web/index.html</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-02T11:27:43.801945" elapsed="0.972743"/>
+</kw>
+<test id="s1-t1" name="Verify Page Title" line="13">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T11:27:44.780873" level="INFO">Page title is 'Katumajärvi Info'.</msg>
+<arg>${PAGE_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-02T11:27:44.775474" elapsed="0.005487"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-02T11:27:46.781650" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-02T11:27:44.781254" elapsed="2.000499"/>
+</kw>
+<doc>Ensure that the page title is correct.</doc>
+<status status="PASS" start="2024-10-02T11:27:44.775027" elapsed="2.006921"/>
+</test>
+<test id="s1-t2" name="Verify Header Is Present" line="18">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-02T11:27:48.783624" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-02T11:27:46.782430" elapsed="2.001292"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T11:27:48.792696" level="INFO">Current page contains element 'xpath=/html/body/header/div[1]/h1'.</msg>
+<arg>xpath=/html/body/header/div[1]/h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.783928" elapsed="0.008841"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T11:27:48.799135" level="INFO">Current page contains element 'xpath=/html/body/header/div[1]/div'.</msg>
+<arg>xpath=/html/body/header/div[1]/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.792942" elapsed="0.006258"/>
+</kw>
+<doc>Check if the header and login button are displayed.</doc>
+<status status="PASS" start="2024-10-02T11:27:46.782130" elapsed="2.017232"/>
+</test>
+<test id="s1-t3" name="Verify Header Text" line="24">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T11:27:48.800082" level="INFO">Verifying element 'xpath=/html/body/header/div[1]/h1' contains exact text 'JÄRVI-MERI WIKI'.</msg>
+<arg>xpath=/html/body/header/div[1]/h1</arg>
+<arg>${HEADER_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.799901" elapsed="0.013227"/>
+</kw>
+<doc>Check if the header text is correct.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.799614" elapsed="0.013704"/>
+</test>
+<test id="s1-t4" name="Verify Banner Text" line="28">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T11:27:48.813975" level="INFO">Verifying element 'xpath=/html/body/header/div[2]/h2' contains exact text 'Here you can find information about Katumajärvi'.</msg>
+<arg>xpath=/html/body/header/div[2]/h2</arg>
+<arg>${BANNER_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.813782" elapsed="0.010894"/>
+</kw>
+<doc>Check if the banner text is correct.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.813495" elapsed="0.011384"/>
+</test>
+<test id="s1-t5" name="Verify Sidebar Is Present" line="32">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T11:27:48.832861" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]'.</msg>
+<arg>${SIDEBAR_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.825331" elapsed="0.007620"/>
+</kw>
+<doc>Check if the sidebar is present on the page.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.825046" elapsed="0.008087"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-02T11:27:48.833574" elapsed="0.108440"/>
+</kw>
+<status status="PASS" start="2024-10-02T11:27:43.623503" elapsed="5.318596"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Test Index">Test Index</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
