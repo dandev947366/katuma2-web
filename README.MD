@@ -1,0 +1,1 @@
+# Katuma 2 webpage tests using Robotframework
