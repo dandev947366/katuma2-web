@@ -1,97 +1,431 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.10.12 on darwin)" generated="2024-10-02T11:27:43.622243" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.10.12 on darwin)" generated="2024-10-02T12:12:48.773677" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Index" source="/Users/dandev947366/Desktop/katuma2-web/test_index.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-10-02T11:27:43.802147" level="INFO">Opening browser 'Chrome' to base url 'file:///Users/dandev947366/Desktop/katuma2-web/index.html'.</msg>
+<msg time="2024-10-02T12:12:48.895798" level="INFO">Opening browser 'Chrome' to base url 'file:///Users/dandev947366/Desktop/katuma2-web/index.html'.</msg>
 <arg>file:///Users/dandev947366/Desktop/katuma2-web/index.html</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-02T11:27:43.801945" elapsed="0.972743"/>
+<status status="PASS" start="2024-10-02T12:12:48.895612" elapsed="1.697767"/>
 </kw>
-<test id="s1-t1" name="Verify Page Title" line="13">
+<test id="s1-t1" name="Verify Page Title" line="41">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-10-02T11:27:44.780873" level="INFO">Page title is 'Katumajärvi Info'.</msg>
+<msg time="2024-10-02T12:12:50.600091" level="INFO">Page title is 'Katumajärvi Info'.</msg>
 <arg>${PAGE_TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-10-02T11:27:44.775474" elapsed="0.005487"/>
+<status status="PASS" start="2024-10-02T12:12:50.594458" elapsed="0.005732"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-02T11:27:46.781650" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-02T12:12:52.602407" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-02T11:27:44.781254" elapsed="2.000499"/>
+<status status="PASS" start="2024-10-02T12:12:50.600414" elapsed="2.002225"/>
 </kw>
 <doc>Ensure that the page title is correct.</doc>
-<status status="PASS" start="2024-10-02T11:27:44.775027" elapsed="2.006921"/>
+<status status="PASS" start="2024-10-02T12:12:50.593727" elapsed="2.009347"/>
 </test>
-<test id="s1-t2" name="Verify Header Is Present" line="18">
+<test id="s1-t2" name="Verify Header Is Present" line="46">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-02T11:27:48.783624" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-02T12:12:54.605282" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-02T11:27:46.782430" elapsed="2.001292"/>
+<status status="PASS" start="2024-10-02T12:12:52.603986" elapsed="2.001395"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-10-02T11:27:48.792696" level="INFO">Current page contains element 'xpath=/html/body/header/div[1]/h1'.</msg>
+<msg time="2024-10-02T12:12:54.614423" level="INFO">Current page contains element 'xpath=/html/body/header/div[1]/h1'.</msg>
 <arg>xpath=/html/body/header/div[1]/h1</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.783928" elapsed="0.008841"/>
+<status status="PASS" start="2024-10-02T12:12:54.605599" elapsed="0.008959"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-10-02T11:27:48.799135" level="INFO">Current page contains element 'xpath=/html/body/header/div[1]/div'.</msg>
+<msg time="2024-10-02T12:12:54.621817" level="INFO">Current page contains element 'xpath=/html/body/header/div[1]/div'.</msg>
 <arg>xpath=/html/body/header/div[1]/div</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.792942" elapsed="0.006258"/>
+<status status="PASS" start="2024-10-02T12:12:54.614740" elapsed="0.007154"/>
 </kw>
 <doc>Check if the header and login button are displayed.</doc>
-<status status="PASS" start="2024-10-02T11:27:46.782130" elapsed="2.017232"/>
+<status status="PASS" start="2024-10-02T12:12:52.603425" elapsed="2.018633"/>
 </test>
-<test id="s1-t3" name="Verify Header Text" line="24">
+<test id="s1-t3" name="Verify Header Text" line="52">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-10-02T11:27:48.800082" level="INFO">Verifying element 'xpath=/html/body/header/div[1]/h1' contains exact text 'JÄRVI-MERI WIKI'.</msg>
+<msg time="2024-10-02T12:12:54.622654" level="INFO">Verifying element 'xpath=/html/body/header/div[1]/h1' contains exact text 'JÄRVI-MERI WIKI'.</msg>
 <arg>xpath=/html/body/header/div[1]/h1</arg>
 <arg>${HEADER_TEXT}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.799901" elapsed="0.013227"/>
+<status status="PASS" start="2024-10-02T12:12:54.622480" elapsed="0.013286"/>
 </kw>
 <doc>Check if the header text is correct.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.799614" elapsed="0.013704"/>
+<status status="PASS" start="2024-10-02T12:12:54.622217" elapsed="0.013758"/>
 </test>
-<test id="s1-t4" name="Verify Banner Text" line="28">
+<test id="s1-t4" name="Verify Banner Text" line="56">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-10-02T11:27:48.813975" level="INFO">Verifying element 'xpath=/html/body/header/div[2]/h2' contains exact text 'Here you can find information about Katumajärvi'.</msg>
+<msg time="2024-10-02T12:12:54.636612" level="INFO">Verifying element 'xpath=/html/body/header/div[2]/h2' contains exact text 'Here you can find information about Katumajärvi'.</msg>
 <arg>xpath=/html/body/header/div[2]/h2</arg>
 <arg>${BANNER_TEXT}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.813782" elapsed="0.010894"/>
+<status status="PASS" start="2024-10-02T12:12:54.636412" elapsed="0.012153"/>
 </kw>
 <doc>Check if the banner text is correct.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.813495" elapsed="0.011384"/>
+<status status="PASS" start="2024-10-02T12:12:54.636143" elapsed="0.012623"/>
 </test>
-<test id="s1-t5" name="Verify Sidebar Is Present" line="32">
+<test id="s1-t5" name="Verify Sidebar Is Present" line="60">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-10-02T11:27:48.832861" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]'.</msg>
+<msg time="2024-10-02T12:12:54.656382" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]'.</msg>
 <arg>${SIDEBAR_XPATH}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.825331" elapsed="0.007620"/>
+<status status="PASS" start="2024-10-02T12:12:54.649224" elapsed="0.007246"/>
 </kw>
 <doc>Check if the sidebar is present on the page.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.825046" elapsed="0.008087"/>
+<status status="PASS" start="2024-10-02T12:12:54.648930" elapsed="0.007790"/>
+</test>
+<test id="s1-t6" name="Verify Blue Green Algae Link Is Present" line="64">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.664223" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]/ul/li[1]/a'.</msg>
+<arg>${BLUE_GREEN_ALGAE_LINK_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.657293" elapsed="0.007012"/>
+</kw>
+<doc>Check if the "Blue-green algae" link is present in the sidebar.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.656957" elapsed="0.007564"/>
+</test>
+<test id="s1-t7" name="Verify Temperature Link Is Present" line="68">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.672099" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]/ul/li[2]/a'.</msg>
+<arg>${TEMPERATURE_LINK_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.664967" elapsed="0.007224"/>
+</kw>
+<doc>Check if the "Temperature" link is present in the sidebar.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.664679" elapsed="0.007692"/>
+</test>
+<test id="s1-t8" name="Verify Water Level Link Is Present" line="72">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.679933" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]/ul/li[3]/a'.</msg>
+<arg>${WATER_LEVEL_LINK_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.672851" elapsed="0.007164"/>
+</kw>
+<doc>Check if the "Water level" link is present in the sidebar.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.672535" elapsed="0.007707"/>
+</test>
+<test id="s1-t9" name="Verify Water Clarity Link Is Present" line="76">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.687960" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]/ul/li[4]/a'.</msg>
+<arg>${WATER_CLARITY_LINK_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.680780" elapsed="0.007266"/>
+</kw>
+<doc>Check if the "Water clarity" link is present in the sidebar.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.680462" elapsed="0.007758"/>
+</test>
+<test id="s1-t10" name="Verify Total Nitrogen Link Is Present" line="80">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.695380" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]/ul/li[5]/a'.</msg>
+<arg>${TOTAL_NITROGEN_LINK_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.688699" elapsed="0.006763"/>
+</kw>
+<doc>Check if the "Total nitrogen" link is present in the sidebar.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.688385" elapsed="0.007259"/>
+</test>
+<test id="s1-t11" name="Verify Total Phosphorus Link Is Present" line="84">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.703494" level="INFO">Current page contains element 'xpath=/html/body/main/div[1]/ul/li[6]/a'.</msg>
+<arg>${TOTAL_PHOSPHORUS_LINK_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.696291" elapsed="0.007304"/>
+</kw>
+<doc>Check if the "Total phosphorus" link is present in the sidebar.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.695939" elapsed="0.007918"/>
+</test>
+<test id="s1-t12" name="Verify Info Card Is Present" line="88">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.711441" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]'.</msg>
+<arg>${INFO_CARD_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.704313" elapsed="0.007217"/>
+</kw>
+<doc>Check if the info card is present on the page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.704027" elapsed="0.007679"/>
+</test>
+<test id="s1-t13" name="Verify Blue Green Algae Info Card" line="92">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.719602" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]/h4'.</msg>
+<arg>${BLUE_GREEN_ALGAE_H4_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.712190" elapsed="0.007517"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.720139" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]/h4' contains exact text 'blue-green algae'.</msg>
+<arg>${BLUE_GREEN_ALGAE_H4_XPATH}</arg>
+<arg>blue-green algae</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.719919" elapsed="0.018471"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.746411" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]/p'.</msg>
+<arg>${BLUE_GREEN_ALGAE_P_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.738610" elapsed="0.007889"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.746905" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]/p' contains exact text 'NO ALGAE DETECTED'.</msg>
+<arg>${BLUE_GREEN_ALGAE_P_XPATH}</arg>
+<arg>NO ALGAE DETECTED</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.746694" elapsed="0.031701"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.787772" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]/button'.</msg>
+<arg>${BLUE_GREEN_ALGAE_BUTTON_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.778645" elapsed="0.009218"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.788293" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[1]/button' contains exact text 'Details'.</msg>
+<arg>${BLUE_GREEN_ALGAE_BUTTON_XPATH}</arg>
+<arg>Details</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.788069" elapsed="0.011201"/>
+</kw>
+<doc>Check if the Blue-green algae info card has the correct elements.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.711872" elapsed="0.087619"/>
+</test>
+<test id="s1-t14" name="Verify Temperature Info Card" line="101">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.806975" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[2]'.</msg>
+<arg>${TEMPERATURE_INFO_CARD_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.799977" elapsed="0.007100"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.814359" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[2]/h4'.</msg>
+<arg>${TEMPERATURE_H4_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.807280" elapsed="0.007170"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.814846" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[2]/h4' contains exact text 'Water temperature'.</msg>
+<arg>${TEMPERATURE_H4_XPATH}</arg>
+<arg>Water temperature</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.814642" elapsed="0.009379"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.830924" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[2]/p'.</msg>
+<arg>${TEMPERATURE_P_XPATH}</arg>
+<arg>23.7°C</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.824240" elapsed="0.006778"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.838117" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[2]/button'.</msg>
+<arg>${TEMPERATURE_BUTTON_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.831218" elapsed="0.006979"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.838622" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[2]/button' contains exact text 'Details'.</msg>
+<arg>${TEMPERATURE_BUTTON_XPATH}</arg>
+<arg>Details</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.838384" elapsed="0.009326"/>
+</kw>
+<doc>Check if the Temperature info card has the correct elements.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.799666" elapsed="0.048267"/>
+</test>
+<test id="s1-t15" name="Verify Water Level Info Card" line="110">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.855692" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[3]'.</msg>
+<arg>${WATER_LEVEL_INFO_CARD_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.848426" elapsed="0.007342"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.862690" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[3]/h4'.</msg>
+<arg>${WATER_LEVEL_H4_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.855943" elapsed="0.006862"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.863288" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[3]/h4' contains exact text 'Water level'.</msg>
+<arg>${WATER_LEVEL_H4_XPATH}</arg>
+<arg>Water level</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.863024" elapsed="0.009367"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.879444" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[3]/p'.</msg>
+<arg>${WATER_LEVEL_P_XPATH}</arg>
+<arg>812 m</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.872616" elapsed="0.006912"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.886688" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[3]/button'.</msg>
+<arg>${WATER_LEVEL_BUTTON_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.879767" elapsed="0.007010"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.887205" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[3]/button' contains exact text 'Details'.</msg>
+<arg>${WATER_LEVEL_BUTTON_XPATH}</arg>
+<arg>Details</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.886960" elapsed="0.009230"/>
+</kw>
+<doc>Check if the Water Level info card has the correct elements.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.848107" elapsed="0.048285"/>
+</test>
+<test id="s1-t16" name="Verify Water Clarity Info Card" line="119">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.903790" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]'.</msg>
+<arg>${WATER_CLARITY_INFO_CARD_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.896887" elapsed="0.006983"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.910935" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]/h4'.</msg>
+<arg>${WATER_CLARITY_H4_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.904068" elapsed="0.006958"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.911426" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]/h4' contains exact text 'Water clarity'.</msg>
+<arg>${WATER_CLARITY_H4_XPATH}</arg>
+<arg>Water clarity</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.911212" elapsed="0.009350"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.927830" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]/p'.</msg>
+<arg>${WATER_CLARITY_P_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.920783" elapsed="0.007132"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.928298" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]/p' contains exact text '4 FTU (Depth 2.9m)'.</msg>
+<arg>${WATER_CLARITY_P_XPATH}</arg>
+<arg>4 FTU (Depth 2.9m)</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.928104" elapsed="0.009569"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.944713" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]/button'.</msg>
+<arg>${WATER_CLARITY_BUTTON_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.937882" elapsed="0.006916"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.945320" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[1]/div[4]/button' contains exact text 'Details'.</msg>
+<arg>${WATER_CLARITY_BUTTON_XPATH}</arg>
+<arg>Details</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.945073" elapsed="0.009407"/>
+</kw>
+<doc>Check if the Water Clarity info card has the correct elements.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.896568" elapsed="0.058169"/>
+</test>
+<test id="s1-t17" name="Verify Total nitrogen Info Card" line="129">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.962074" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[1]/h4'.</msg>
+<arg>${TOTAL_NITROGEN_H4_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.955249" elapsed="0.006918"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.962564" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[1]/h4' contains exact text 'Total nitrogen'.</msg>
+<arg>${TOTAL_NITROGEN_H4_XPATH}</arg>
+<arg>Total nitrogen</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.962354" elapsed="0.009477"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.978398" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[1]/p'.</msg>
+<arg>${TOTAL_NITROGEN_P_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.972042" elapsed="0.006444"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.978851" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[1]/p' contains exact text '390 μg/l'.</msg>
+<arg>${TOTAL_NITROGEN_P_XPATH}</arg>
+<arg>390 μg/l</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.978665" elapsed="0.009348"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.995019" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[1]/button'.</msg>
+<arg>${TOTAL_NITROGEN_BUTTON_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.988220" elapsed="0.006898"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:54.995545" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[1]/button' contains exact text 'Details'.</msg>
+<arg>${TOTAL_NITROGEN_BUTTON_XPATH}</arg>
+<arg>Details</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.995327" elapsed="0.010252"/>
+</kw>
+<doc>Check if the Total nitrogen info card has the correct elements.</doc>
+<status status="PASS" start="2024-10-02T12:12:54.954934" elapsed="0.050859"/>
+</test>
+<test id="s1-t18" name="Verify Total Phosphorus Info Card" line="138">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:55.013345" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[2]/h4'.</msg>
+<arg>${TOTAL_PHOSPHORUS_H4_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.006286" elapsed="0.007148"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:55.013839" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[2]/h4' contains exact text 'Total phosphorus'.</msg>
+<arg>${TOTAL_PHOSPHORUS_H4_XPATH}</arg>
+<arg>Total phosphorus</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.013627" elapsed="0.010492"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:55.031851" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[2]/p'.</msg>
+<arg>${TOTAL_PHOSPHORUS_P_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.024356" elapsed="0.007586"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:55.032361" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[2]/p' contains exact text '10 μg/l'.</msg>
+<arg>${TOTAL_PHOSPHORUS_P_XPATH}</arg>
+<arg>10 μg/l</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.032148" elapsed="0.009877"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:55.049797" level="INFO">Current page contains element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[2]/button'.</msg>
+<arg>${TOTAL_PHOSPHORUS_BUTTON_XPATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.042330" elapsed="0.007556"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:12:55.050276" level="INFO">Verifying element 'xpath=/html/body/main/div[2]/section/div[2]/div/div[2]/button' contains exact text 'Details'.</msg>
+<arg>${TOTAL_PHOSPHORUS_BUTTON_XPATH}</arg>
+<arg>Details</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.050077" elapsed="0.009334"/>
+</kw>
+<doc>Check if the Total Phosphorus info card has the correct elements.</doc>
+<status status="PASS" start="2024-10-02T12:12:55.005969" elapsed="0.053630"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-02T11:27:48.833574" elapsed="0.108440"/>
+<status status="PASS" start="2024-10-02T12:12:55.060041" elapsed="0.102132"/>
 </kw>
-<status status="PASS" start="2024-10-02T11:27:43.623503" elapsed="5.318596"/>
+<status status="PASS" start="2024-10-02T12:12:48.775409" elapsed="6.386846"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="18" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="Test Index">Test Index</stat>
+<stat pass="18" fail="0" skip="0" id="s1" name="Test Index">Test Index</stat>
 </suite>
 </statistics>
 <errors>
